@@ -297,7 +297,7 @@ const NutriAI_Landing = () => {
       {/* --- TECNOLOGIA & DADOS --- */}
       <section id="tecnologia" className="py-24 relative overflow-hidden">
         <div className="container mx-auto px-6">
-           <div className="bg-gradient-to-br from-emerald-900/20 to-slate-900 border border-emerald-500/20 rounded-3xl p-8 md:p-12 relative overflow-hidden">
+           <div className="bg-gradient-to-br from-emerald-900/20 to-slate-900 border border-emerald-500/20 rounded-3xl p-6 md:p-12 relative overflow-hidden">
              <div className="absolute -top-24 -right-24 w-64 h-64 bg-emerald-500/20 rounded-full blur-[80px]" />
 
              <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
@@ -325,8 +325,9 @@ const NutriAI_Landing = () => {
                    </ul>
                </div>
 
-               <div className="bg-slate-950/50 rounded-2xl p-6 border border-slate-800 backdrop-blur-sm">
-                   <div className="flex items-center justify-between mb-4 border-b border-slate-800 pb-4">
+
+               <div className="bg-slate-950/50 rounded-2xl p-4 md:p-6 border border-slate-800 backdrop-blur-sm overflow-x-auto">
+                   <div className="flex items-center justify-between mb-4 border-b border-slate-800 pb-4 min-w-[300px]">
                       <span className="text-sm font-mono text-emerald-400">WhatsAppWebHookController.java</span>
                       <div className="flex gap-2">
                         <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
@@ -334,15 +335,17 @@ const NutriAI_Landing = () => {
                         <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
                       </div>
                    </div>
-                   <code className="text-xs md:text-sm font-mono text-slate-300">
-                     <span className="text-slate-400">log</span>.<span className="text-blue-400">info</span>(<span className="text-orange-300">"Imagem recebida de &#123;&#125;. media_id=&#123;&#125;"</span>, from, mediaId);<br/>
+
+                   <code className="text-xs md:text-sm font-mono text-slate-300 whitespace-pre block">
+                     <span className="text-slate-400">log</span>.<span className="text-blue-400">info</span>(<span className="text-orange-300">"Imagem recebida... media_id=&#123;&#125;"</span>);<br/>
                      <span className="text-slate-400">api</span>.<span className="text-blue-400">sendText</span>(from, <span className="text-orange-300">"Foto recebida!"</span>);<br/>
                      <br/>
                      <span className="text-purple-400">var</span> media = <span className="text-slate-400">mediaClient</span>.<span className="text-blue-400">download</span>(mediaId);<br/>
                      <br/>
                      <span className="text-slate-400">api</span>.<span className="text-blue-400">sendText</span>(from, <span className="text-orange-300">"🤖 Analisando imagem..."</span>);<br/>
                      <br/>
-                     <span className="text-emerald-400">GeminiVisionClient.PlateAnalysis</span> analysis = <span className="text-slate-400">analysisService</span>.<span className="text-blue-400">analyzeImage</span>(media.bytes(), media.mimeType());
+                     <span className="text-emerald-400">GeminiVisionClient.PlateAnalysis</span> analysis = <br/>
+                     <span className="pl-4 text-slate-400">analysisService</span>.<span className="text-blue-400">analyzeImage</span>(media.bytes());
                    </code>
                </div>
              </div>
